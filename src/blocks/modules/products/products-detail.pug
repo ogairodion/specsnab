@@ -1,0 +1,66 @@
+include products-detail-data.pug
+include ../../../blocks/components/counter/counter.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/tabs/tabs.pug
+
+section.products-detail
+    .l-default
+        include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+        .products-detail__top
+            .products-detail__left
+                .swiper-container.products-detail__slider
+                    .swiper-wrapper
+                        a.swiper-slide.products-detail__img(href="img/product/1.png" data-fancybox="gallery") 
+                            +webp(['product/1'], 'png')
+                        a.swiper-slide.products-detail__img(href="img/product/2.png" data-fancybox="gallery") 
+                            +webp(['product/2'], 'png')
+                        a.swiper-slide.products-detail__img(href="img/product/3.png" data-fancybox="gallery") 
+                            +webp(['product/3'], 'png')
+                        a.swiper-slide.products-detail__img(href="img/product/5.png" data-fancybox="gallery") 
+                            +webp(['product/5'], 'png')
+                        a.swiper-slide.products-detail__img(href="img/product/4.png" data-fancybox="gallery") 
+                            +webp(['product/4'], 'png')
+                        a.swiper-slide.products-detail__img(href="img/product/4.png" data-fancybox="gallery") 
+                            +webp(['product/4'], 'png')
+                .products-detail__thumbs
+                    .products-detail__thumbs-img
+                        +webp(['product/1'], 'png')
+                    .products-detail__thumbs-img
+                        +webp(['product/2'], 'png')
+                    .products-detail__thumbs-img
+                        +webp(['product/3'], 'png')
+                    .products-detail__thumbs-img
+                        +webp(['product/5'], 'png')
+                    .products-detail__thumbs-img
+                        +webp(['product/4'], 'png') 
+                    .products-detail__thumbs-img
+                        +webp(['product/4'], 'png')
+            .products-detail__info
+                h1.products-detail__title.title.title--h2 СВЕТОВАЯ БАЛКА ФОТОН 6 
+                .products-detail__actual
+                    .products-detail__actual-code Код: 707-1133
+                    .products-detail__actual-available В наличии на складе
+                    .products-detail__actual-favorites 
+                        .products-detail__actual-favorites--icon     
+                            +svgMono('fav')
+                        .products-detail__actual-favorites--text В избранном
+                .products-detail__characteristics
+                    .products-detail__characteristic
+                        .products-detail__characteristic-title Габариты, мм: 980*270*125
+                    .products-detail__characteristic
+                        .products-detail__characteristic-title Количество светодиодов	
+                        .products-detail__characteristic-text 1+
+                    .products-detail__characteristic
+                        .products-detail__characteristic-title Зацепы (Легковой а/м) комплект	
+                        .products-detail__characteristic-text да
+                    .products-detail__characteristic
+                        .products-detail__characteristic-title Зацепы (Камаз, МАЗ, Газель, УАЗ, ЗиЛ)		
+                        .products-detail__characteristic-text да 	
+                    .products-detail__characteristic
+                        .products-detail__characteristic-title Цвет		
+                        .products-detail__characteristic-text бело-лунный,<br>белый,<br> синий 	
+                .products-detail__price 15 000 руб.
+                .products-detail__triggers
+                    +counter()
+                    +button(text='В корзину', icon='cart')
+        +tabs(titles=tabs_titles, contents=tabs_contents)

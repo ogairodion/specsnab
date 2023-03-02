@@ -1,0 +1,14 @@
+mixin radio(attributes)
+    .radio  
+        .radio__trigger
+            - if (attributes.id === '1')
+                input.radio__input(type='radio' name=attributes.name checked=true)
+            - else 
+                input.radio__input(type='radio' name=attributes.name)
+            .radio__btn
+            .radio__text!= attributes.text
+        .radio__description!= attributes.description
+        - if (attributes.phone)
+            a.radio__phone(href='tel:' + attributes.phoneHref)= attributes.phone
+        - if (attributes.message)
+            .radio__message= attributes.message

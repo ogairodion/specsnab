@@ -1,0 +1,5 @@
+mixin category(attributes)
+    a.category(href="#") 
+        .category__img
+            +webp([`product/${attributes.img}`], 'png')
+        .category__name= attributes.name

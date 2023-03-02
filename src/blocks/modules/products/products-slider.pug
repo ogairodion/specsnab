@@ -1,0 +1,18 @@
+include ../../../blocks/components/product/product-data.pug
+include ../../../blocks/components/product/product.pug
+
+section.products-slider
+    .l-default
+        h2.products-slider__title.title.title--h2 РЕКОМЕНДУЕМ К ПОКУПКЕ
+        .products-slider__wrapper
+            .products-slider__container.swiper-container     
+                .swiper-wrapper   
+                    each product in products  
+                        .swiper-slide 
+                            +product(img=product.img, name=product.name, code=product.code, class=product.class, raiting=product.raiting, price=product.price)
+                .swiper-pagination.products-slider__pagination
+        .products-slider__arrows
+            .products-slider__arrow.products-slider__arrow--prev
+                img(src="img/svg/arrow-slide-product.svg", alt="")
+            .products-slider__arrow.products-slider__arrow--next
+                img(src="img/svg/arrow-slide-product.svg", alt="")

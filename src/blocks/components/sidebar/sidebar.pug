@@ -1,0 +1,35 @@
+include sidebar-data.pug
+
+.sidebar
+    .sidebar__trigger
+        .sidebar__trigger-btn
+            img(src="img/svg/filter.svg", alt="")
+    .sidebar__container
+        .sidebar__top Проблесковые маяки
+        .sidebar__body
+            .sidebar__list
+                each sidebar_item in sidebar_items
+                    a.sidebar__list-item(href=sidebar_item.href)= sidebar_item.text
+            .sidebar__prices
+                .sidebar__body-title Цены
+                .sidebar__prices-wrapper
+                    .sidebar__price
+                        .sidebar__price-title От
+                        .sidebar__price-input
+                            input(type="number" placeholder='1' min='1')
+                    .sidebar__price
+                        .sidebar__price-title До
+                        .sidebar__price-input
+                            input(type="number" placeholder='7500' min='7500')
+            .sidebar__checkboxes
+                .sidebar__checkbox
+                    .sidebar__checkbox-input
+                        input(type="checkbox")
+                        .input-btn
+                    .sidebar__checkbox-name Новинки
+            .sidebar__checkboxes
+                .sidebar__checkbox
+                    .sidebar__checkbox-input
+                        input(type="checkbox")
+                        .input-btn
+                    .sidebar__checkbox-name Акции

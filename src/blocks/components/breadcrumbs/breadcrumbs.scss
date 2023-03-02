@@ -1,0 +1,32 @@
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .breadcrumb {
+        display: flex;
+        align-items: center;
+        color: $grey;
+
+        span {
+            text-decoration: underline;
+        }
+
+        &:after {
+            content: '>';
+            margin: 0 4px;
+        }
+
+        &:last-child {
+            pointer-events: none;
+            
+            span {
+                text-decoration: none;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

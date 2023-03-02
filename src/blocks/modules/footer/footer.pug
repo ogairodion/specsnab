@@ -1,0 +1,28 @@
+footer.footer
+    .footer__top
+        .l-default
+            .footer__logo
+                img(src="img/svg/logo-white.svg", alt="")
+            .footer__center
+                .footer__menu
+                    each footer_menu_category in menu_categories
+                        a.footer__menu-item(href=footer_menu_category.href)= footer_menu_category.text 
+                .footer__phone  
+                    .footer__phone-icon 
+                        +svgMono('phone')
+                    .footer__phone-texts
+                        a.footer__phone-text(href="tel:+78009999999") 8 800 999 99 99
+                        a.footer__phone-form(href="") Заказать звонок
+    .footer__bottom
+        .l-default
+            .footer__bottom-wrapper
+                .footer__address Санкт-Петербург, промзона Парнас, пер. 5-ый Верхний 19 А, пом. 10Н.
+                a.footer__mail(href='mailto:info@ss78.ru') info@ss78.ru
+                .footer__socials
+                    a.footer__social(href="https://t.me/specsnabshop") 
+                        +svgMono('telegram')
+                    a.footer__social(href="https://api.whatsapp.com/send?phone=79819333331") 
+                        +svgMono('whatsapp')
+                    a.footer__social(href="https://instagram.com/specsnabshop") 
+                        +svgMono('instagram')
+                    

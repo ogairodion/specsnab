@@ -1,0 +1,23 @@
+extends ../layouts/default
+include ../helpers/_mixins-default
+include ../helpers/_mixins-custom
+include ../../blocks/components/section-top/section-top.pug
+
+block variables
+  - const title = "Корзина"
+
+block content
+  include ../../blocks/modules/header/header.pug
+  .arrow-up.hidden
+    img(src="img/svg/arrow-up.svg", alt="")
+  main.main   
+    +sectionTop(img='cart', title='ВАША КОРЗИНА')
+    include ../../blocks/modules/cart/cart.pug
+    include ../../blocks/modules/subscribe/subscribe.pug
+  include ../../blocks/modules/popup/popup.pug
+  include ../../blocks/modules/footer/footer.pug
+
+block scripts
+  script(defer src="./js/vendor.js")
+  script(defer src="./js/main.js")
+  script(defer src="./js/cart.js")

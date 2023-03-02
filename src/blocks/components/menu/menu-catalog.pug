@@ -1,0 +1,39 @@
+.menu-catalog
+    .menu-catalog__wrapper
+        .menu-catalog__left
+            each menu_catalog_item in menu_catalog_left
+                .menu-catalog__item(data-id=menu_catalog_item.id)
+                    a.menu-catalog__item-text(href=menu_catalog_item.href)= menu_catalog_item.text
+                    .menu-catalog__item-arrow
+                        +webp(['arrow-menu'], 'png')
+        .menu-catalog__right
+            each menu_catalog_content in menu_catalog_left
+                .menu-catalog__content(data-id=menu_catalog_content.id)
+                    .menu-catalog__content-title Световые панели
+                    .menu-catalog__list
+                        .menu-catalog__list-item
+                            a.menu-catalog__list-title(href="") Световые балки
+                            .menu-catalog__list-items
+                                a.menu-catalog__list-link(href="") Проблесковые балки 600-950 мм
+                                a.menu-catalog__list-link(href="") Проблесковые балки 950-1200 мм
+                                a.menu-catalog__list-link(href="") Проблесковые балки 1200-2000 мм
+                        .menu-catalog__list-item
+                            .menu-catalog__list-title Световые балки
+                            .menu-catalog__list-items
+                                a.menu-catalog__list-link(href="") Проблесковые балки 600-950 мм
+                                a.menu-catalog__list-link(href="") Проблесковые балки 950-1200 мм
+                                a.menu-catalog__list-link(href="") Проблесковые балки 1200-2000 мм
+                        .menu-catalog__list-item
+                            .menu-catalog__list-title Световые балки
+                            .menu-catalog__list-items
+                                a.menu-catalog__list-link(href="") Проблесковые балки 600-950 мм
+                                a.menu-catalog__list-link(href="") Проблесковые балки 950-1200 мм
+                                a.menu-catalog__list-link(href="") Проблесковые балки 1200-2000 мм
+                        .menu-catalog__list-item
+                            .menu-catalog__list-title Световые балки
+                            .menu-catalog__list-items
+                                a.menu-catalog__list-link(href="") Проблесковые балки 600-950 мм
+                                a.menu-catalog__list-link(href="") Проблесковые балки 950-1200 мм
+                                a.menu-catalog__list-link(href="") Проблесковые балки 1200-2000 мм
+            .menu-catalog__img 
+                +webp(['product/detail'], 'png')

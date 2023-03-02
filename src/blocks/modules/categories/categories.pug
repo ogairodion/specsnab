@@ -1,0 +1,10 @@
+include ../../../blocks/components/category/category-data.pug
+include ../../../blocks/components/category/category.pug
+
+section.categories
+    .l-default
+        .categories__wrapper
+            .categories__title.title.title--h2 КАТЕГОРИИ ТОВАРОВ
+            .categories__container
+                each category in categories  
+                    +category(img=category.img, name=category.name)

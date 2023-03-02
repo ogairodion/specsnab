@@ -1,0 +1,72 @@
+.marketing{
+    position: relative;
+    padding-bottom: 167px;
+    @media screen and (max-width: 991px) {
+        padding-bottom: 50px;
+    }
+    @media screen and (max-width: 767px) {
+        padding-bottom: 33px;
+    }
+    &__container{
+        display: flex;
+        align-items: flex-start;
+        gap: 100px;
+
+        @media screen and (max-width: 991px) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+    &__img {
+        align-self: flex-end;
+        width: 50%;
+        
+        @media screen and (max-width: 991px) {
+            order: 1;
+            width: 100%;
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+    &__wrapper {
+        width: 50%;
+
+        @media screen and (max-width: 991px) {
+            width: 100%;
+        }
+    }
+    &__title{
+        margin-bottom: 38px;
+        @media screen and (max-width: 991px) {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 767px) {
+            margin-bottom: 22px;
+        }
+    }
+    &__text{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        color: #000000;
+        margin-bottom: 61px;
+
+        @media screen and (max-width: 991px) {
+            font-size: 17px;
+            margin-bottom: 45px;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+            margin-bottom: 36px;
+        }
+    }
+    &__button{
+        @media screen and (max-width: 767px) {
+            margin: 0 auto;
+        }
+    }
+}

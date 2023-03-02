@@ -1,0 +1,6 @@
+mixin sectionTop(attributes)
+    section.section-top
+        .section-top__img 
+            +webp(['top/' + attributes.img], 'jpg')
+        .l-default
+            h1.section-top__title.title.title--h5= attributes.title 

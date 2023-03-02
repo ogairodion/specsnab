@@ -1,0 +1,14 @@
+include ../../../blocks/components/product/product-data.pug
+include ../../../blocks/components/product/product.pug
+
+section.catalog 
+    .l-default 
+        include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+        h1.catalog__title.title.title--h4 Проблесковые маяки
+        .catalog__content   
+            include ../../../blocks/components/sidebar/sidebar.pug
+            .catalog__products  
+                each product in products  
+                    +product(img=product.img, name=product.name, code=product.code, class=product.class, raiting=product.raiting, price=product.price)
+
+            

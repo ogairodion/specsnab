@@ -1,0 +1,13 @@
+ProjectTitle: ProjectName
+
+PageList:
+  - file: homepage.html
+    ready: 100
+  - file: 404.html
+    ready: 100
+  - file: catalog.html
+    ready: 100
+  - file: product.html
+    ready: 100
+  - file: cart.html
+    ready: 100

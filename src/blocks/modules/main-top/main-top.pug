@@ -1,0 +1,35 @@
+include ../../../blocks/components/button/button.pug
+
+section.main-top
+    .main-top__img
+        +webp(['main-top/bg'], 'jpg')
+    .l-default
+        .main-top__wrapper
+            .main-top__slider-arrow.main-top__slider-arrow--prev
+                img(src="img/svg/arrow-slide.svg", alt="")
+            .main-top__slider.swiper-container
+                .swiper-wrapper 
+                    .swiper-slide.main-top__slide
+                        .main-top__slide-info
+                            h1.main-top__title.title.title--h1 СТАНЬ ЗАМЕТНЕЕ НА ДОРОГАХ. СТАНЬ ЗАМЕТНЕЕ ДЛЯ ВСЕХ!
+                            .main-top__text tLorem ipsum sit dolor amet codslkznckljxdfvlx zscxknvxbvmcbnv,m , mvn,mc nv,cxknv dx.cmxnvmcbv,cv,nc,vnc,nv,
+                            +button(text='Подробнее')
+                        .main-top__slide-img
+                            +webp(['product/4'], 'png')
+                    .swiper-slide.main-top__slide
+                        .main-top__slide-info
+                            h1.main-top__title.title.title--h1 СТАНЬ ВИДНЕЕ НА ДОРОГЕ2
+                            .main-top__text tLorem ipsum sit dolor amet codslkznckljxdfvlx zscxknvxbvmcbnv,m , mvn,mc nv,cxknv dx.cmxnvmcbv,cv,nc,vnc,nv,
+                            +button(text='Подробнее')
+                        .main-top__slide-img
+                            +webp(['product/4'], 'png')
+                    .swiper-slide.main-top__slide
+                        .main-top__slide-info
+                            h1.main-top__title.title.title--h1 СТАНЬ ВИДНЕЕ НА ДОРОГЕ3
+                            .main-top__text tLorem ipsum sit dolor amet codslkznckljxdfvlx zscxknvxbvmcbnv,m , mvn,mc nv,cxknv dx.cmxnvmcbv,cv,nc,vnc,nv,
+                            +button(text='Подробнее')
+                        .main-top__slide-img
+                            +webp(['product/4'], 'png')
+                .main-top__pagination.swiper-pagination
+            .main-top__slider-arrow.main-top__slider-arrow--next
+                img(src="img/svg/arrow-slide.svg", alt="")

@@ -1,0 +1,22 @@
+extends ../layouts/default
+include ../helpers/_mixins-default
+include ../helpers/_mixins-custom
+include ../../blocks/components/section-top/section-top.pug
+
+block variables
+    - const title = "Страница 404 ошибки"
+
+block content
+    include ../../blocks/modules/header/header.pug
+    .arrow-up.hidden
+        img(src="img/svg/arrow-up.svg", alt="")
+    main.main
+        +sectionTop(img='404', title='Страница не найдена')
+        include ../../blocks/modules/notfound/notfound.pug
+        include ../../blocks/modules/subscribe/subscribe.pug
+    include ../../blocks/modules/popup/popup.pug
+    include ../../blocks/modules/footer/footer.pug
+
+block scripts
+    script(defer src="./js/vendor.js")
+    script(defer src="./js/main.js")

@@ -1,0 +1,27 @@
+include ../button/button.pug
+
+mixin product(attributes)
+    .product(class=attributes.class)
+        .product__top
+            .product__code= attributes.code
+            .product__fav 
+                +svgMono('fav')
+        .product__img   
+            +webp([`product/${attributes.img}`, 'png'])
+        .product__info
+            //- .product__raitings(data-raiting=attributes.raiting)
+                //- .product__raiting
+                //-     +svgMono('star')
+                //- .product__raiting
+                //-     +svgMono('star')
+                //- .product__raiting
+                //-     +svgMono('star')
+                //- .product__raiting
+                //-     +svgMono('star')
+                //- .product__raiting
+                //-     +svgMono('star')
+            a.product__name(href="#")= attributes.name
+            //- .product__price-sale= 1900
+            .product__price= attributes.price
+            .product__btn 
+                +button(text='В корзину', icon='cart' type='button')

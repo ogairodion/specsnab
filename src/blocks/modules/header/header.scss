@@ -1,0 +1,223 @@
+.header {
+    position: relative;
+    z-index: z('header');
+    
+    &__top {
+        padding: 23px 0;
+        color: #fff;
+        background: $blue;
+    }
+
+    &__center {
+        position: relative;
+        z-index: 5;
+        padding: 18px 0;
+        border-bottom: 1px solid #CCCCCC;
+
+        .header {
+            &__container {
+                @media screen and (max-width: 1099px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        padding: 18px 0;
+
+        .header {
+            &__container {
+                @media screen and (max-width: 1199px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo, .burger {
+        min-width: 275px;
+
+        @media screen and (max-width: 1099px) {
+            min-width: 0;
+        }
+    }
+
+    &__logo {
+        @media screen and (max-width: 1099px) {
+            max-width: 150px;
+        }
+    }
+
+    &__container {
+        min-width: 869px;
+        margin-left: 130px;
+
+        @media screen and (max-width: 1921px) {
+            min-width: 0;
+            margin-left: 41px;
+        }
+
+        @media screen and (max-width: 1299px) {
+            width: 100%;
+        }
+    }
+
+    .search {
+        width: 665px;
+
+        @media screen and (max-width: 1299px) {
+            flex: 1 1 auto;
+            width: 100%;
+        }
+    }
+
+    &__search {
+        &-mobile {
+            @media screen and (max-width: 1099px) {
+                flex: 1 1 auto;
+                width: 100%;
+            }
+        }
+    }
+
+    &__phone, &__fav {
+        margin-left: auto;
+    }
+
+    &__fav {
+        display: none !important;
+    }
+
+    &__fav, &__cart {
+        font-size: 31px !important;
+
+        @media screen and (max-width: 1921px) {
+            font-size: 26px !important;
+            margin-right: 8px;
+        }
+
+        @media screen and (max-width: 1099px) {
+            font-size: 20px !important;
+        }
+    }
+
+    &__fav {
+        margin-right: 24px;
+    }
+
+    &__cart {
+        position: relative;
+        margin-left: auto;
+
+        &-count {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            min-width: 23px;
+            min-height: 23px;
+            border-radius: 100%;
+            background: $orange;
+            color: #fff;
+            font-size: 14px;
+            line-height: 1;
+            padding: 2px;
+        }
+    }
+
+    &__phone {
+        display: flex;
+        align-items: flex-start;
+        font-weight: 600;
+
+        @media screen and (max-width: 1299px) {
+            margin-left: 20px;
+        }
+
+        @media screen and (max-width: 1099px) {
+            margin-right: 8px;
+            margin-left: auto;
+        }
+
+        &-icon {
+            font-size: 35px;
+            line-height: 1;
+            margin-right: 16px;
+
+            @media screen and (max-width: 1099px) {
+                font-size: 20px;
+                margin-right: 0;
+            }
+
+            svg {
+                fill: $orange;
+            }
+        }
+
+        &-texts {
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (max-width: 1099px) {
+                display: none;
+            }
+        }
+
+        &-text {
+            font-size: 22px;
+            line-height: 1;
+            white-space: nowrap;
+            margin-bottom: 2px;
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            max-width: fit-content;
+            font-size: 16px;
+            line-height: 1;
+            white-space: nowrap;
+            margin-left: auto;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: $orange;
+                margin-top: 2px;
+            }
+        }
+    }
+
+    &__mobile {
+        &-icons {
+            display: none;
+            align-items: center;
+
+            @media screen and (max-width: 1099px) {
+                display: flex;
+            }
+        }
+    }
+
+    &__menu {
+        color: #fff;
+        background: $blue;
+        padding: 20px 0; 
+
+        @media screen and (max-width: 1199px) {
+            display: none;
+        }
+    }
+}

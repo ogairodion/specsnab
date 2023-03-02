@@ -1,0 +1,166 @@
+include ../../../blocks/components/counter/counter.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/radio/radio.pug
+
+section.cart 
+    .l-default  
+        include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+
+        .cart__step
+            // для сообщений об отмене
+            .cart__message.hidden
+                .cart__message-icon
+                    img(src="img/svg/done.svg", alt="")
+                .cart__message-name Проблесковый маяк удален.
+                .cart__message-cancel Отменить действие?
+    
+            // для сообщений о пустой корзине
+            .cart__message.hidden
+                .cart__message-icon
+                    img(src="img/svg/cart.svg", alt="")
+                .cart__message-name Корзина пуста.
+
+            // для возврата
+            +button(text='ВЕРНУТЬСЯ В КАТАЛОГ' class='btn--back hidden')
+            
+            // таблица
+            .swiper-container.cart__table-slider
+                .swiper-wrapper 
+                    .swiper-slide 
+                        table.cart__table
+                            thead
+                                tr 
+                                    td НАИМЕНОВАНИЕ
+                                    td ЦЕНА
+                                    td КОЛИЧЕСТВО
+                                    td СУММА
+                                    td 
+                            tbody
+                                tr 
+                                    td 
+                                        .cart__main
+                                            .cart__img  
+                                                +webp(['product/2'], 'png')
+                                            .cart__name СВЕТОВАЯ БАЛКА ФОТОН 6
+                                    td 
+                                        .cart__price 15 000 руб.
+                                    td 
+                                        +counter
+                                    td  
+                                        .cart__price.cart__price-result <span>15 000</span> руб.
+                                    td
+                                        .cart__remove 
+                                tr.cart__table-result 
+                                    td(colspan="1")
+                                    td(colspan="3") 
+                                        .cart__result
+                                            .cart__result-title Итого
+                                            .cart__result-price
+                                                .cart__result-text Цена
+                                                .cart__result-value 15 000 руб.
+                                            .cart__result-all  
+                                                .cart__result-text Стоимость заказа
+                                                .cart__result-value 15 000 руб.
+            
+            // для перехода на оформление
+            +button(text='ОФОРМИТЬ ЗАКАЗ' class='btn--buy')
+        
+        .cart__step.hidden
+            // для спасибо 
+            .cart__thanks
+                .cart__thanks-icon
+                    img(src="img/svg/done.svg", alt="")
+                .cart__thanks-text Благодарим за заказ! <br> Мы свяжемся с вами в ближайшее время для уточнения деталей.
+                table.cart__thanks-table
+                    thead
+                        tr 
+                            td Номер заказа:
+                            td Дата заказа:
+                            td Сумма заказа:
+                            td Способ оплаты:
+                    tbody   
+                        tr 
+                            td 3487
+                            td 10 декабря 2022
+                            td 15 000 р.
+                            td Онлайн-оплата
+
+        .cart__step.hidden
+            // для формы 
+            .cart__info
+                form.cart__form
+                    .cart__info-title ДАННЫЕ ЗАКАЗА
+                    .cart__inputs
+                        input(type="text" name="name" placeholder="Имя *" required) 
+                        input(type="text" name="secondName" placeholder="Фамилия *" required) 
+                        input(type="tel" name="phone" placeholder="Телефон *" required) 
+                        input(type="email" name="email" placeholder="Электронная почта *" required) 
+                    .cart__info-title ДАННЫЕ ЗАКАЗА
+                    textarea
+                .cart__content
+                    .cart__info-title Содержимое заказа
+                    .cart__content-item
+                        .cart__product
+                            .cart__product-img 
+                                +webp(['product/detail'], 'png')
+                            .cart__product-name СВЕТОВАЯ БАЛКА ФОТОН 6
+                            .cart__product-price 15 000 руб.
+                            .cart__product-remove   
+                                img(src="img/svg/remove.svg", alt="")
+                    .cart__content-item
+                        .cart__price
+                            .cart__price-text Цена
+                            .cart__price-number 15 000 руб.
+                    .cart__content-item
+                        .cart__cost
+                            .cart__cost-text Стоимость заказа
+                            .cart__cost-number 15 000 руб.
+
+
+            // для продолжения
+            +button(text='Продолжить' class='btn--next')
+
+        // доставка
+        .cart__step
+            .cart__delivery
+                .cart__delivery-top
+                    .cart__info-title ВЫБЕРИТЕ ЖЕЛАЕМЫЙ ТИП ДОСТАВКИ
+                    .cart__delivery-radios
+                        +radio(
+                                name="typeDelivery", 
+                                text="Самовывоз со склада. " , 
+                                id="1"
+                                description="Адрес склада: Санкт-Петербург, промзона Парнас, пер. 5-ый Верхний 19 А, пом. 10Н. Если у Вас нет возможности ожидать курьера или товар необходим срочно, вы можете забрать его самостоятельно с нашего склада. Укажите в комментариях к заказу желаемые дату и время отгрузки и наш сотрудник свяжется с Вами для подтверждения возможности отгрузки."
+                                phone="+7(981)9-33333-1"
+                                phoneHref="+79819333331"
+                            )
+
+                        +radio(
+                                name="typeDelivery", 
+                                text="Доставка по РФ любой транспортной компанией на выбор получателя до пункта выдачи или до адреса получателя.",
+                                description="Доставка оплачивается получателем, стоимость доставки будет рассчитана исходя из весогабаритных показателей груза и пункта назначения."
+                            )
+
+                        +radio(
+                                name="typeDelivery",
+                                text="Доставка по Санкт-Петербургу."
+                                description="Осуществляется любой службой доставки на выбор получателя до пункта выдачи или до адреса получателя. Доставка оплачивается получателем, стоимость доставки будет рассчитана исходя из весогабаритных показателей груза и пункта назначения."
+                            )
+                    .radio__message Внимание! Товар отправляется еженедельно в дни отгрузки по вторникам и пятницам. Срочная отправка оговаривается в индивидуальном порядке. При заказе товара на сумму от 100.000 рублей, доставка по Санкт-Петербургу в пределах КАД осуществляется бесплатно.
+                    input.cart__delivery-input(type="text" placeholder="Введите адрес")
+                .cart__delivery-map 
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A86e8de883cf4b83ba96db4086369aefc554b179156c459e1feaccfd966dfba9c&amp;source=constructor" width="100%" frameborder="0"></iframe>
+            .cart__date.cart__item
+                .cart__info-title КОГДА ДОСТАВИТЬ ЗАКАЗ
+                .cart__date-radios 
+                    +radio(name="cartDate", text="Сегодня (при наличии товара на складе и согласованию по звонку)", id="1")
+                    +radio(name="cartDate", text="СРЕДА / ПЯТНИЦА (дни отправок товара, развозок по ТК  и по СПб)")
+            .cart__pay.cart__item
+                .cart__info-title Предпочтительный способ связи
+                .cart__pay-radios 
+                    +radio(name="connect", text="По телефону", id="1")
+                    +radio(name="connect", text="По почте")
+                    +radio(name="connect", text="Whatsapp")
+                    +radio(name="connect", text="Telegram")
+            // для продолжения
+            +button(text='Продолжить' class='btn--next')

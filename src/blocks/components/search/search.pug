@@ -1,0 +1,22 @@
+include search-data.pug
+
+.search
+    form.form
+        .form__input
+            button.form__input-icon 
+                +svgMono('search')
+            +input({typeInput:'text', placeholder:'Что вы ищете?'})
+        .search__results
+            .search__results-left
+                each search_category in search_categories
+                    a.search__results-category(href=search_category.href)= search_category.text 
+            .search__results-right
+                .search__results-products
+                    each search_product in search_products
+                        a.search__product(href='#')
+                            .search__product-img
+                                +webp([`product/${search_product.img}`], 'png')
+                            .search__product-info
+                                .search__product-code= search_product.code
+                                .search__product-name= search_product.name
+                                .search__product-price= search_product.price

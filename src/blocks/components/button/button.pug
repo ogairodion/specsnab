@@ -1,0 +1,23 @@
+mixin button(attributes)
+    - const icon = attributes.icon ? 'icon' : '';
+    - if (attributes.tag == 'button') 
+        button.button(type=attributes.type class=attributes.class class=icon)= attributes.text
+    - else 
+        - if (attributes.type == 'button' && attributes.submit == true)
+            button.button(class=attributes.class class=icon type='submit')
+                - if (attributes.icon)
+                    .button__icon
+                        +svgMono(attributes.icon)
+                .button__text= attributes.text
+        - else if (attributes.type == 'button' && attributes.submit == null || attributes.type == 'button' && attributes.submit == false)
+            button.button(class=attributes.class class=icon)
+                - if (attributes.icon)
+                    .button__icon
+                        +svgMono(attributes.icon)
+                .button__text= attributes.text
+        - else 
+            a.button(href=attributes.href class=attributes.class class=icon)
+                - if (attributes.icon)
+                    .button__icon
+                        +svgMono(attributes.icon)
+                .button__text= attributes.text

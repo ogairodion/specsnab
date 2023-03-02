@@ -1,0 +1,13 @@
+include pluses-data.pug 
+
+section.pluses
+    .l-default
+        .pluses__wrapper 
+            .pluses__title.title.title--h2 НЕОСПОРИМЫЕ ПЛЮСЫ РАБОТЫ С НАМИ
+            .pluses__container  
+                each plus in pluses 
+                    .pluses__container-item
+                        .pluses__item-logo
+                            img(src=`img/svg/${plus.logo}.svg`, alt=plus.logo)
+                        .pluses__item-subtitle=plus.subtitle
+                        .pluses__item-text=plus.text

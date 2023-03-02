@@ -1,0 +1,48 @@
+.popup {
+    display: none;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px;
+
+    .form {
+        width: 100%;
+
+        &__title {
+            font-size: 26px;
+            line-height: 120%;
+            font-weight: 900;
+            margin-bottom: 16px;
+
+            @media screen and (max-width: 600px) {
+                font-size: 18px;
+            }
+        }
+
+        input {
+            width: 100%;
+            min-height: 40px;
+            background: #FFFFFF;
+            border: 1px solid #F06508;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 140px;
+            background: #FFFFFF;
+            border: 1px solid #F06508;
+            border-radius: 8px;
+            resize: none;
+            padding: 16px;
+        }
+    }
+    
+    .button {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 16px;
+    }
+}

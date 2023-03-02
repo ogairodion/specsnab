@@ -1,0 +1,8 @@
+mixin tabs(attributes)
+    .tabs
+        .tabs__titles
+            each title, index in attributes.titles
+                .tabs__title(data-id=index)= title.text
+        .tabs__contents
+            each content, index in attributes.contents
+                .tabs__content(data-id=index)!= content.text

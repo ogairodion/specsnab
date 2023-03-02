@@ -1,0 +1,36 @@
+include ../../../blocks/components/menu/menu-data.pug
+
+header.header
+    //- .header__top
+    //-     .l-default 
+    //-         .header__wrapper
+    //-             include ../../../blocks/components/menu/menu.pug
+    .header__menu
+        .l-default
+            include ../../../blocks/components/menu/menu-categories.pug
+    .header__center
+        .l-default 
+            .header__wrapper
+                .header__logo   
+                    img(src="img/svg/logo.svg", alt="")
+                .header__container
+                    include ../../../blocks/components/search/search.pug
+                .header__phone 
+                    a.header__phone-icon(href="tel:+78009999999") 
+                        +svgMono('phone')
+                    .header__phone-texts
+                        a.header__phone-text(href="tel:+78009999999") 8 800 999 99 99
+                        a.header__phone-form(href="#popup-call" data-fancybox) Заказать звонок
+                .header__mobile-icons
+    .header__bottom
+        .l-default 
+            .header__wrapper
+                include ../../../blocks/components/burger/burger.pug
+                .header__search-mobile
+                a.header__fav(href="") 
+                    +svgMono('fav')
+                a.header__cart(href="")
+                    .header__cart-icon
+                        +svgMono('cart')
+                    .header__cart-count 2
+    

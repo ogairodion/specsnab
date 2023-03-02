@@ -1,0 +1,13 @@
+.popup#popup-call
+    form.form
+        .form__title Заказать обратный звонок
+        .form__input
+            input(type="text" name="name" placeholder="ФИО") 
+        .form__input
+            input(type="tel" name="phone" placeholder="Телефон")
+        .form__input
+            input(type="email" name="email" placeholder="E-mail")
+        .form__input
+            textarea(type="text" name="comment" placeholder="Оставить сообщение")
+        .form__submit 
+            +button(text="Отправить" type="button" submit=true)

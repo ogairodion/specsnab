@@ -1,0 +1,214 @@
+.footer {
+    color: #fff;
+    background: $blue;
+
+    a {
+        @include  tr('all');
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 48px;
+        
+        @media screen and (max-width: 991px) {
+            margin: 0 38px 31px;
+        }
+
+        @media screen and (max-width: 359px) {
+            margin: 0 0 31px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1300px;
+        margin: 0 -56px -40px;
+
+        @media screen and (max-width: 1921px) {
+            margin: 0 -28px -40px;
+        }
+
+        &-item {
+            width: calc(33.3333% - 112px);
+            font-size: 18px;
+            line-height: 120%;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0 56px 40px;
+
+            @media screen and (max-width: 1921px) {
+                width: calc(33.3333% - 56px);
+                margin: 0 28px 40px;
+            }
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__mail {
+        display: flex;
+        max-width: fit-content;
+        font-size: 20px;
+        line-height: 120%;
+        font-weight: 600;
+
+        @media screen and (max-width: 1099px) {
+            margin-top: 20px;
+        }
+    }
+
+    &__center {
+        display: flex;
+        @media screen and (max-width: 991px) {
+            flex-direction: column;
+            margin: 0 38px;
+        }
+
+        @media screen and (max-width: 359px) {
+            margin: 0;
+        }
+    }
+
+    &__top {
+        padding: 74px 0 102px;
+        @media screen and (max-width: 767px) {
+            padding: 37px 0 50px;
+        }
+    }
+
+    &__bottom {
+        color: $orange;
+        background: $blue_dark;
+        padding: 50px 0;
+        @media screen and (max-width: 767px) {
+            padding: 35px 0;
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            @media screen and (max-width: 1099px) {
+                flex-direction: column;
+            }
+        }
+
+        &-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            @media screen and (max-width: 767px) {
+                gap: 24px;
+            }
+        }
+
+        &-item {
+            font-size: 20px;
+            line-height: 120%;
+            font-weight: 600;
+            @media screen and (max-width: 767px) {
+                &:last-child{
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    &__phone {
+        display: flex;
+        align-items: flex-start;
+        font-weight: 600;
+        margin-left: auto;
+        @media screen and (max-width: 991px) {
+            margin: 40px auto 0;
+        }
+        @media screen and (max-width: 767px) {
+            margin: 40px 0 0;
+        }
+
+        &-icon {
+            font-size: 35px;
+            line-height: 1;
+            margin-right: 16px;
+
+            svg {
+                fill: $orange;
+            }
+        }
+
+        &-texts {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-text {
+            font-size: 22px;
+            line-height: 1;
+            white-space: nowrap;
+            margin-bottom: 22px;
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            max-width: fit-content;
+            font-size: 16px;
+            line-height: 1;
+            white-space: nowrap;
+            margin-left: auto;
+            @media screen and (max-width: 991px) {
+                margin: 0;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #fff;
+                margin-top: 2px;
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 1099px) {
+            margin-top: 20px;
+        }
+    }
+
+    &__address {
+        max-width: 600px;
+        font-size: 20px;
+        line-height: 120%;
+        margin-right: 20px;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__social {
+        font-size: 30px;
+        line-height: 1;
+        
+        &:not(:last-child) {
+            margin-right: 18px;
+        }
+
+        svg {
+            fill: $orange;
+        }
+    }
+}

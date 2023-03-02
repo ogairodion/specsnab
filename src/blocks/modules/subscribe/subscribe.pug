@@ -1,0 +1,13 @@
+include ../../../blocks/components/button/button.pug
+
+section.subscribe(style="background: url('.././img/subscribe/subscribe.jpg'); background-size: cover; background-repeat: no-repeat")
+    .l-default
+        .subscribe__wrapper
+            .subscribe__title.title.title--h3 Подпишитесь на новости и получайте скидки первыми! 
+            .subscribe__form 
+                .subscribe__form-logo 
+                    img(src="img/svg/sale.svg", alt="sale")
+                form.subscribe__form-container
+                    input.subscribe__form-input(type="email",placeholder='Оставьте свою почту')
+                    +button.subscribe__form-button(text='ОТПРАВИТЬ' type='button' submit=true)
+

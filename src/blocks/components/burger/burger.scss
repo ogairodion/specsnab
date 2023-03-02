@@ -1,0 +1,91 @@
+.burger {
+    @include tr('all');
+    display: flex;
+    align-items: center;
+    max-width: 275px;
+    text-transform: uppercase;
+    color: #fff;
+    background: $orange;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 16px 19px;
+
+    @media screen and (max-width: 1099px) {
+        padding: 8px;
+    }
+
+    &__icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 30px;
+        min-height: 23px;
+
+        @media screen and (max-width: 1099px) {
+            min-width: 0;
+            width: 30px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 120%;
+        font-weight: 600;
+        margin-left: 48px;
+
+        @media screen and (max-width: 1099px) {
+            display: none;
+        }
+    }
+
+    span {
+        @include tr('all');
+        position: absolute;
+        left: 0;
+        height: 3px;
+        border-radius: 4px;
+        background: #fff;
+        opacity: 1;
+
+        @media screen and (max-width: 1099px) {
+            height: 2px;
+        }
+
+        &:first-child {
+            top: 0;
+            width: 100%;
+        }
+
+        &:nth-child(2) {
+            top: 10px;
+            width: 80%;
+        }
+
+        &:last-child {
+            top: 20px;
+            width: 80%;
+        }
+    }
+
+    &.open {
+        span {
+            top: 50%;
+            left: 50%;
+
+            &:nth-child(2) {
+                width: 0;
+                opacity: 0;
+            }
+
+            &:first-child {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &:last-child {
+                width: 100%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+}
