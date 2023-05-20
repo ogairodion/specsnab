@@ -18,9 +18,18 @@ header.header
                 .header__phone 
                     a.header__phone-icon(href="tel:+78009999999") 
                         +svgMono('phone')
-                    .header__phone-texts
-                        a.header__phone-text(href="tel:+78009999999") 8 800 999 99 99
-                        a.header__phone-form(href="#popup-call" data-fancybox) Заказать звонок
+                    .header__phone-wrapper
+                        .header__phone-texts
+                            a.header__phone-text(href="tel:+78009999999") 8 800 999 99 99
+                            a.header__phone-form(href="#popup-call" data-fancybox) Заказать звонок
+                        a.header__whatsapp(href="https://api.whatsapp.com/send?phone=79819333331")
+                            .header__whatsapp-icon
+                                +svgMono('whatsapp')
+                            .header__whatsapp-text Написать в вацап
+                        a.header__email(href="mailto:info@ss78.ru")
+                            .header__email-icon
+                                +svgMono('email')
+                            .header__email-text Написать на почту
                 .header__mobile-icons
     .header__bottom
         .l-default 
